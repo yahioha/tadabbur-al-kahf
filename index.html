@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>خلاصة تدبر الكهف 32-59</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Amiri+Quran&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fbf7ec;
+  --surface: #ffffff;
+  --surface-2: #f2ead6;
+  --ink: #2b2620;
+  --ink-soft: #6b6152;
+  --border: #e4d8ba;
+  --accent: #2f5d4e;
+  --shadow: 0 1px 2px rgba(43,38,32,.05), 0 8px 22px rgba(43,38,32,.05);
+
+  --green: #2f5d4e;    --green-soft: #e7efe9;
+  --gold:  #9c6b1f;    --gold-soft:  #f4ecd6;
+  --blue:  #33586f;    --blue-soft:  #e6edf1;
+  --red:   #8a3a2e;    --red-soft:   #f3e5e1;
+  --violet:#5b4a78;    --violet-soft:#ece7f2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141e1a; --surface: #1c2822; --surface-2: #223129;
+    --ink: #ece4d3; --ink-soft: #a99f8b; --border: #33453c;
+    --accent: #7fb89a;
+    --shadow: 0 1px 2px rgba(0,0,0,.35), 0 8px 22px rgba(0,0,0,.28);
+    --green: #7fb89a;  --green-soft: #203029;
+    --gold:  #d9ac62;  --gold-soft:  #2e2717;
+    --blue:  #8fb2c7;  --blue-soft:  #1e2a30;
+    --red:   #d98f7f;  --red-soft:   #2e211d;
+    --violet:#b3a3d6;  --violet-soft:#241f31;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141e1a; --surface: #1c2822; --surface-2: #223129;
+  --ink: #ece4d3; --ink-soft: #a99f8b; --border: #33453c;
+  --accent: #7fb89a;
+  --shadow: 0 1px 2px rgba(0,0,0,.35), 0 8px 22px rgba(0,0,0,.28);
+  --green: #7fb89a;  --green-soft: #203029;
+  --gold:  #d9ac62;  --gold-soft:  #2e2717;
+  --blue:  #8fb2c7;  --blue-soft:  #1e2a30;
+  --red:   #d98f7f;  --red-soft:   #2e211d;
+  --violet:#b3a3d6;  --violet-soft:#241f31;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); margin: 0;
+  font-family: 'Tajawal', 'Segoe UI', Tahoma, sans-serif;
+  direction: rtl; line-height: 1.7; font-size: 15px;
+}
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 16px 56px; }
+h1,h2,h3 { font-family:'Amiri', serif; text-wrap: balance; margin: 0 0 .3em; }
+a { color: inherit; }
+
+.hero { padding: 30px 0 16px; text-align: center; }
+.hero .kicker { font-size: .78rem; letter-spacing: .06em; color: var(--ink-soft); }
+.hero .surah { font-family:'Amiri Quran','Amiri',serif; font-size: 2.1rem; color: var(--accent); margin: .1em 0; }
+.hero .subtitle { font-size: .88rem; color: var(--ink-soft); max-width: 560px; margin: 0 auto; }
+
+/* index pad */
+.indexbar {
+  position: sticky; top: 0; z-index: 6; background: var(--bg);
+  padding: 10px 0; border-bottom: 1px solid var(--border); margin-bottom: 18px;
+}
+.indexbar .indexlabel { font-size: .72rem; color: var(--ink-soft); margin-bottom: 6px; }
+.idxrow { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+.idx {
+  width: 27px; height: 27px; display: flex; align-items: center; justify-content: center;
+  border-radius: 7px; font-size: .74rem; font-weight: 700; text-decoration: none;
+  font-variant-numeric: tabular-nums; border: 1px solid var(--border);
+  background: var(--surface); color: var(--ink-soft);
+}
+.idx-green { color: var(--green); } .idx-gold { color: var(--gold); }
+.idx-blue { color: var(--blue); } .idx-red { color: var(--red); } .idx-violet { color: var(--violet); }
+
+.navrow { display: flex; flex-wrap: wrap; gap: 6px; }
+.navchip {
+  display: flex; flex-direction: column; gap: 0; padding: 4px 10px; border-radius: 8px;
+  font-size: .72rem; font-weight: 700; text-decoration: none; border: 1px solid transparent;
+}
+.navchip span { font-weight: 400; font-size: .68rem; opacity: .85; }
+.navchip-green { background: var(--green-soft); color: var(--green); }
+.navchip-gold { background: var(--gold-soft); color: var(--gold); }
+.navchip-blue { background: var(--blue-soft); color: var(--blue); }
+.navchip-red { background: var(--red-soft); color: var(--red); }
+.navchip-violet { background: var(--violet-soft); color: var(--violet); }
+
+.panel {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+  padding: 16px 20px; margin-bottom: 18px; box-shadow: var(--shadow);
+}
+.panel h2 { font-size: 1.08rem; color: var(--accent); margin-bottom: 10px; }
+.videonote { font-size: .82rem; color: var(--ink-soft); }
+.videonote ul { margin: 6px 0; padding-inline-start: 1.1em; }
+
+/* cheat sheet */
+.cheatgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 10px; }
+.cheat { border-radius: 10px; padding: 10px 12px; border: 1px solid var(--border); }
+.cheat-green { background: var(--green-soft); } .cheat-gold { background: var(--gold-soft); }
+.cheat-blue { background: var(--blue-soft); } .cheat-red { background: var(--red-soft); }
+.cheat-violet { background: var(--violet-soft); }
+.cheat-top { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+.cheat-rng { font-family:'Amiri',serif; font-weight: 700; font-size: .78rem; font-variant-numeric: tabular-nums; }
+.cheat-title { font-weight: 700; font-size: .85rem; }
+.cheat p { margin: 0; font-size: .78rem; color: var(--ink-soft); }
+
+/* lists */
+.numlist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.numlist li { display: flex; gap: 10px; align-items: flex-start; }
+.chip {
+  flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--accent);
+  color: var(--surface); display: flex; align-items: center; justify-content: center;
+  font-family:'Amiri',serif; font-weight: 700; font-size: .8rem; font-variant-numeric: tabular-nums;
+}
+.chip.alt { background: var(--gold); }
+.numlist p { margin: 0; font-size: .87rem; padding-top: 2px; }
+
+/* verse groups */
+.group { margin-bottom: 22px; }
+.group-title { display: flex; align-items: baseline; gap: 8px; font-size: 1.05rem; margin: 0 0 10px 2px; }
+.group-title .tag {
+  font-family:'Amiri',serif; font-weight: 700; font-size: .72rem; padding: 2px 9px; border-radius: 7px;
+  color: var(--surface); font-variant-numeric: tabular-nums;
+}
+.group-title-green .tag { background: var(--green); } .group-title-green { color: var(--green); }
+.group-title-gold .tag { background: var(--gold); } .group-title-gold { color: var(--gold); }
+.group-title-blue .tag { background: var(--blue); } .group-title-blue { color: var(--blue); }
+.group-title-red .tag { background: var(--red); } .group-title-red { color: var(--red); }
+.group-title-violet .tag { background: var(--violet); } .group-title-violet { color: var(--violet); }
+
+.cardgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+@media (max-width: 700px) { .cardgrid { grid-template-columns: 1fr; } }
+
+.card {
+  break-inside: avoid; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; box-shadow: var(--shadow);
+  border-inline-start: 3px solid var(--border);
+}
+.card-green { border-inline-start-color: var(--green); }
+.card-gold { border-inline-start-color: var(--gold); }
+.card-blue { border-inline-start-color: var(--blue); }
+.card-red { border-inline-start-color: var(--red); }
+.card-violet { border-inline-start-color: var(--violet); }
+
+.card-head { margin-bottom: 6px; }
+.card-num {
+  font-family:'Amiri Quran','Amiri',serif; font-size: 1rem; font-weight: 700; color: var(--accent);
+}
+.card-num::before { content: "﴿"; } .card-num::after { content: "﴾"; }
+.ayah {
+  font-family: 'Amiri Quran','Amiri',serif; font-size: 1.08rem; line-height: 1.95;
+  margin: 0 0 8px; padding: 9px 11px; border-radius: 9px;
+  background: var(--surface-2); color: var(--ink);
+}
+.card-green .ayah { background: var(--green-soft); }
+.card-gold  .ayah { background: var(--gold-soft); }
+.card-blue  .ayah { background: var(--blue-soft); }
+.card-red   .ayah { background: var(--red-soft); }
+.card-violet .ayah { background: var(--violet-soft); }
+.ln { margin: 0 0 5px; font-size: .82rem; color: var(--ink); }
+.ln:last-child { margin-bottom: 0; }
+.ln strong { color: var(--ink-soft); font-weight: 700; font-size: .74rem; }
+.ln.tafsir { color: var(--ink-soft); }
+.ln.sual { color: var(--ink-soft); font-style: italic; }
+
+footer { text-align: center; font-size: .76rem; color: var(--ink-soft); padding-top: 8px; }
+
+@media (max-width: 480px) {
+  .hero .surah { font-size: 1.7rem; }
+  .panel { padding: 14px 14px; }
+}
+
+@media print {
+  @page { size: A4; margin: 13mm 11mm; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-size: 12.5px; }
+  .indexbar { position: static; }
+  .card, .panel, .group { break-inside: avoid; }
+  .group { break-before: page; }
+  .group:first-of-type { break-before: auto; }
+}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <div class="hero">
+    <div class="kicker">دليل جلسة تدبّر — نسخة مختصرة</div>
+    <div class="surah">سورة الكهف · الآيات 32–59</div>
+    <div class="subtitle">أهم المعاني ولمسات التدبر من الطبري وابن كثير والقرطبي والسعدي وابن عاشور والوسيط، بصيغة سريعة الالتقاط والتنقل</div>
+  </div>
+
+  <div class="indexbar">
+    <div class="indexlabel">فهرس سريع بالآية — اضغط رقمًا للانتقال مباشرة</div>
+    <div class="idxrow"><a class="idx idx-green" href="#ayah-32">32</a><a class="idx idx-green" href="#ayah-33">33</a><a class="idx idx-green" href="#ayah-34">34</a><a class="idx idx-green" href="#ayah-35">35</a><a class="idx idx-green" href="#ayah-36">36</a><a class="idx idx-green" href="#ayah-37">37</a><a class="idx idx-green" href="#ayah-38">38</a><a class="idx idx-green" href="#ayah-39">39</a><a class="idx idx-green" href="#ayah-40">40</a><a class="idx idx-green" href="#ayah-41">41</a><a class="idx idx-green" href="#ayah-42">42</a><a class="idx idx-green" href="#ayah-43">43</a><a class="idx idx-green" href="#ayah-44">44</a><a class="idx idx-gold" href="#ayah-45">45</a><a class="idx idx-gold" href="#ayah-46">46</a><a class="idx idx-blue" href="#ayah-47">47</a><a class="idx idx-blue" href="#ayah-48">48</a><a class="idx idx-blue" href="#ayah-49">49</a><a class="idx idx-red" href="#ayah-50">50</a><a class="idx idx-red" href="#ayah-51">51</a><a class="idx idx-red" href="#ayah-52">52</a><a class="idx idx-red" href="#ayah-53">53</a><a class="idx idx-violet" href="#ayah-54">54</a><a class="idx idx-violet" href="#ayah-55">55</a><a class="idx idx-violet" href="#ayah-56">56</a><a class="idx idx-violet" href="#ayah-57">57</a><a class="idx idx-violet" href="#ayah-58">58</a><a class="idx idx-violet" href="#ayah-59">59</a></div>
+    <div class="navrow">
+      <a class="navchip" style="background:var(--surface-2);color:var(--ink)" href="#cheat">ملخص</a>
+      <a class="navchip" style="background:var(--surface-2);color:var(--ink)" href="#top10">أهم 10 رسائل</a>
+      <a class="navchip navchip-green" href="#g1">32–44<span>مثل صاحبي الجنتين</span></a><a class="navchip navchip-gold" href="#g2">45–46<span>مثل الحياة الدنيا</span></a><a class="navchip navchip-blue" href="#g3">47–49<span>مشهد يوم القيامة</span></a><a class="navchip navchip-red" href="#g4">50–53<span>قصة إبليس ومشهد النار</span></a><a class="navchip navchip-violet" href="#g5">54–59<span>طبيعة الإنسان وحكمة الإمهال</span></a>
+      <a class="navchip" style="background:var(--surface-2);color:var(--ink)" href="#discussion">أسئلة النقاش</a>
+    </div>
+  </div>
+
+  <div class="panel videonote" id="videos">
+    <strong>ملاحظة:</strong> لم يمكن الوصول الموثوق لمحتوى الفيديوهات الثلاثة (رفض يوتيوب الجلب التلقائي)، فلم تُدرج أي استنتاجات منها تجنبًا للتخمين — أرسل نصوصها لدمج أفكارها.
+  </div>
+
+  <section class="panel" id="cheat">
+    <h2>ملخص سريع للجلسة</h2>
+    <div class="cheatgrid"><div class="cheat cheat-green"><div class="cheat-top"><span class="cheat-rng">32–44</span><span class="cheat-title">مثل صاحبي الجنتين</span></div><p>المال ابتلاء لا فضل. الغرور يتدرّج: إعجاب ← شك ← تألٍّ على الله. الندم الأعمق على الشرك لا المال. الخلاصة: الولاية لله وحده (44).</p></div><div class="cheat cheat-gold"><div class="cheat-top"><span class="cheat-rng">45–46</span><span class="cheat-title">مثل الحياة الدنيا</span></div><p>الدنيا كنبات: يخضرّ ثم يجفّ ويتطاير. المال والبنون زينة زائلة، والباقيات الصالحات خير ثوابًا وأملًا.</p></div><div class="cheat cheat-blue"><div class="cheat-top"><span class="cheat-rng">47–49</span><span class="cheat-title">يوم القيامة</span></div><p>الجبال تُسيَّر، الحشر شامل، والكتاب يُحصي كل صغيرة وكبيرة — والله لا يظلم أحدًا.</p></div><div class="cheat cheat-red"><div class="cheat-top"><span class="cheat-rng">50–53</span><span class="cheat-title">إبليس والنار</span></div><p>الملائكة سجدت لآدم إلا إبليس ففسق. تحذير من اتخاذه وليًّا. الشركاء يخذلون أصحابهم. المجرمون يوقنون هلاكهم.</p></div><div class="cheat cheat-violet"><div class="cheat-top"><span class="cheat-rng">54–59</span><span class="cheat-title">طبيعة الإنسان والإمهال</span></div><p>الإنسان أكثر شيء جدلًا. الإعراض المتكرر يُقسّي القلب. مهمة الرسل التبشير والإنذار. رحمة الله تُمهل، ولكل ظالم موعد.</p></div></div>
+  </section>
+
+  <section class="panel" id="top10">
+    <h2>أهم 10 رسائل في الآيات 32-59</h2>
+    <ol class="numlist"><li><span class="chip">1</span><p>المال والأولاد زينة الحياة الدنيا وابتلاء يكشف حقيقة القلب، وليسا مقياسًا لفضل الإنسان عند الله (32، 46).</p></li><li><span class="chip">2</span><p>الغرور بالنعمة يتدرّج خطوة بخطوة: إعجاب ← شك بالبعث ← تألٍّ على الله — وكل خطوة صغيرة تمهّد للتي تليها (34–36).</p></li><li><span class="chip">3</span><p>نسبة النعمة إلى الله عند الإعجاب بها («ما شاء الله لا قوة إلا بالله») سبب لحفظها، ونسيان ذلك من أسباب زوالها (39).</p></li><li><span class="chip">4</span><p>من أقرّ بأن الله خلقه من عدم، فلا عذر له في إنكار قدرته على إعادته؛ الإعادة أهون من البدء (37).</p></li><li><span class="chip">5</span><p>الثبات على التوحيد لا يحتاج مالًا ولا جاهًا، بل يقينًا قلبيًا ثابتًا (38).</p></li><li><span class="chip">6</span><p>الباقيات الصالحات هي الاستثمار الباقي، بخلاف زينة الدنيا الزائلة مهما بدت عظيمة (46).</p></li><li><span class="chip">7</span><p>كل ما يُتّخذ وليًّا من دون الله يثبت عجزه التام في أحرج لحظة يحتاجه فيها الإنسان (43، 51–52).</p></li><li><span class="chip">8</span><p>إبليس عدو أصلي لبني آدم، واتخاذه وذريته أولياء من أسوأ ما يستبدله الظالم بولاية الله (50).</p></li><li><span class="chip">9</span><p>الإعراض المتكرر عن التذكير يقسّي القلب تدريجيًا حتى يفقد القدرة على الاهتداء (57).</p></li><li><span class="chip">10</span><p>رحمة الله تُمهل ولا تُهمل؛ فلكل ظالم — فردًا أو أمة — موعدٌ محتوم لا يتخلف (58–59).</p></li></ol>
+  </section>
+
+  
+<section class="group" id="g1">
+  <h2 class="group-title group-title-green"><span class="tag">32–44</span>مثل صاحبي الجنتين</h2>
+  <div class="cardgrid"><article class="card card-green" id="ayah-32">
+  <div class="card-head"><span class="card-num">32</span></div>
+  <p class="ayah">۞ وَٱضْرِبْ لَهُم مَّثَلًا رَّجُلَيْنِ جَعَلْنَا لِأَحَدِهِمَا جَنَّتَيْنِ مِنْ أَعْنَـٰبٍ وَحَفَفْنَـٰهُمَا بِنَخْلٍ وَجَعَلْنَا بَيْنَهُمَا زَرْعًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> مثل رجلين: أنعم الله على أحدهما بجنتين ليختبر شكره لا ليكرمه فحسب.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> اختلف المفسرون في هوية الرجلين (إخوة من مخزوم؟ من بني إسرائيل؟) — والسعدي يذكّر أن العبرة في القصة لا في تحديد الأشخاص.</p><p class="ln tadabbur"><strong>تدبر:</strong> النعمة ابتلاء يكشف القلب، لا فخر يُضاف للنفس.</p><p class="ln amal"><strong>تطبيق:</strong> انظر لنعمك (مال، أسرة، نجاح) كأمانة واختبار، لا كإنجاز خاص بك.</p><p class="ln sual"><strong>سؤال:</strong> كيف أتعامل مع النعم الكبيرة: كامتحان أم كإنجاز شخصي؟</p>
+</article><article class="card card-green" id="ayah-33">
+  <div class="card-head"><span class="card-num">33</span></div>
+  <p class="ayah">كِلْتَا ٱلْجَنَّتَيْنِ ءَاتَتْ أُكُلَهَا وَلَمْ تَظْلِم مِّنْهُ شَيْـًٔا ۚ وَفَجَّرْنَا خِلَـٰلَهُمَا نَهَرًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> الجنتان أعطتا ثمارهما كاملة، ونهر يفجّر بينهما — نعمة تامة الأسباب.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> لطيفة بلاغية (الوسيط): «لم تَظلم» الجنة تقابل «ظالمٌ لنفسه» الرجل في الآية التالية.</p><p class="ln tadabbur"><strong>تدبر:</strong> كمال الأسباب الظاهرة لا يضمن حسن العاقبة إن غاب الشكر.</p><p class="ln amal"><strong>تطبيق:</strong> عند اكتمال أمورك، اشكر الله بدل الانشغال بالتباهي بها أمام الناس.</p><p class="ln sual"><strong>سؤال:</strong> هل أشكر الله حين تسير أموري على ما يرام، أم أنسى في زحمة الرضا عن النفس؟</p>
+</article><article class="card card-green" id="ayah-34">
+  <div class="card-head"><span class="card-num">34</span></div>
+  <p class="ayah">وَكَانَ لَهُۥ ثَمَرٌ فَقَالَ لِصَـٰحِبِهِۦ وَهُوَ يُحَاوِرُهُۥٓ أَنَا۠ أَكْثَرُ مِنكَ مَالًا وَأَعَزُّ نَفَرًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> افتخر الرجل بماله وكثرة أتباعه أمام صاحبه المؤمن الفقير.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> قتادة (كما نقله ابن كثير): «تلك والله أمنية الفاجر: كثرة المال وعزة النفر».</p><p class="ln tadabbur"><strong>تدبر:</strong> القيمة الحقيقية للإنسان في إيمانه وعمله، لا فيما يملك.</p><p class="ln amal"><strong>تطبيق:</strong> راقب نزعة مقارنة نفسك أو الآخرين بالمال أو الجاه أو عدد المتابعين.</p><p class="ln sual"><strong>سؤال:</strong> هل أقيس قيمتي أو قيمة غيري بما نملك من مال أو جاه؟</p>
+</article><article class="card card-green" id="ayah-35">
+  <div class="card-head"><span class="card-num">35</span></div>
+  <p class="ayah">وَدَخَلَ جَنَّتَهُۥ وَهُوَ ظَالِمٌ لِّنَفْسِهِۦ قَالَ مَآ أَظُنُّ أَن تَبِيدَ هَـٰذِهِۦٓ أَبَدًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> دخل جنته مغرورًا وقال: لن تفنى هذه أبدًا.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> لطيفة (صاحب الكشاف عبر الوسيط): «جنته» بالإفراد — أي كل ما يملكه هو جنته الوحيدة، لأنه لا نصيب له في جنة الآخرة.</p><p class="ln tadabbur"><strong>تدبر:</strong> الشعور بالأمان الدائم تجاه نعمة دنيوية وهمٌ خطير يصيب صاحبه من حيث لا يشعر.</p><p class="ln amal"><strong>تطبيق:</strong> تذكّر عند كل نعمة كبيرة أنها عارية، والاطمئنان الحقيقي بالآخرة لا بالدنيا.</p><p class="ln sual"><strong>سؤال:</strong> هل أعيش وكأن نعمي الحالية ستبقى إلى الأبد؟</p>
+</article><article class="card card-green" id="ayah-36">
+  <div class="card-head"><span class="card-num">36</span></div>
+  <p class="ayah">وَمَآ أَظُنُّ ٱلسَّاعَةَ قَآئِمَةً وَلَئِن رُّدِدتُّ إِلَىٰ رَبِّى لَأَجِدَنَّ خَيْرًا مِّنْهَا مُنقَلَبًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> زاد غرورًا فأنكر قيام الساعة، وزعم أنه سيُعطى خيرًا في الآخرة أيضًا.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> السعدي: سعة الدنيا ليست دليل رضا الله، بل الغالب أن الله يُوسّعها على من لا نصيب له في الآخرة.</p><p class="ln tadabbur"><strong>تدبر:</strong> الغرور يتدرّج خطوة بخطوة — من شك، إلى إنكار، إلى تألٍّ على الله — إن لم يُكبح مبكرًا.</p><p class="ln amal"><strong>تطبيق:</strong> لا تربط سعة رزقك آليًا بقربك من الله أو استحقاقك للجنة.</p><p class="ln sual"><strong>سؤال:</strong> هل أربط بين نعمة الله عليّ وبين ظني برضاه عني؟</p>
+</article><article class="card card-green" id="ayah-37">
+  <div class="card-head"><span class="card-num">37</span></div>
+  <p class="ayah">قَالَ لَهُۥ صَاحِبُهُۥ وَهُوَ يُحَاوِرُهُۥٓ أَكَفَرْتَ بِٱلَّذِى خَلَقَكَ مِن تُرَابٍ ثُمَّ مِن نُّطْفَةٍ ثُمَّ سَوَّىٰكَ رَجُلًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> ردّ المؤمن مستنكرًا: كيف تكفر بمن خلقك من تراب ثم نطفة؟</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> القرطبي: من أقرّ بالخلق الأول فلا عذر له في إنكار البعث؛ فالإعادة أهون من البدء.</p><p class="ln tadabbur"><strong>تدبر:</strong> تذكّر أصلك الضعيف (نطفة، تراب) وسيلة عملية لكسر الكِبر من جذوره.</p><p class="ln amal"><strong>تطبيق:</strong> واجه غرور من حولك بالحجة الهادئة والتذكير الرقيق، لا بالتوبيخ الجارح.</p><p class="ln sual"><strong>سؤال:</strong> كيف أتعامل مع من أرى فيه غرورًا أو غفلة حولي؟</p>
+</article><article class="card card-green" id="ayah-38">
+  <div class="card-head"><span class="card-num">38</span></div>
+  <p class="ayah">لَّـٰكِنَّا۠ هُوَ ٱللَّهُ رَبِّى وَلَآ أُشْرِكُ بِرَبِّىٓ أَحَدًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> أعلن المؤمن توحيده بوضوح: «الله ربي ولا أشرك به أحدًا».</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> السعدي: إعلانٌ واضح وقت المجادلة، لتثبيت الموقف لا للانجرار في جدل طويل.</p><p class="ln tadabbur"><strong>تدبر:</strong> قوة إيمان هذا الرجل لم تكن مرتبطة بماله (فهو الأفقر بينهما) بل بيقين قلبي ثابت.</p><p class="ln amal"><strong>تطبيق:</strong> تدرّب على التعبير المباشر عن قناعاتك الإيمانية دون تردد عند الضغط الاجتماعي.</p><p class="ln sual"><strong>سؤال:</strong> هل أملك وضوح هذا الرجل المؤمن وثباته أمام الشبهات؟</p>
+</article><article class="card card-green" id="ayah-39">
+  <div class="card-head"><span class="card-num">39</span></div>
+  <p class="ayah">وَلَوْلَآ إِذْ دَخَلْتَ جَنَّتَكَ قُلْتَ مَا شَآءَ ٱللَّهُ لَا قُوَّةَ إِلَّا بِٱللَّهِ ۚ إِن تَرَنِ أَنَا۠ أَقَلَّ مِنكَ مَالًا وَوَلَدًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> عاتبه المؤمن: كان ينبغي أن تقول عند إعجابك بجنتك «ما شاء الله لا قوة إلا بالله».</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> القرطبي ينقل أحاديث صحيحة في فضل «لا حول ولا قوة إلا بالله» بوصفها كنزًا من كنوز الجنة.</p><p class="ln tadabbur"><strong>تدبر:</strong> ربط النعمة بالله عند الإعجاب بها حماية من الغرور، ونسيان ذلك سبب لزوالها كما سيحدث بعد آيات.</p><p class="ln amal"><strong>تطبيق:</strong> تعوّد قول «ما شاء الله لا قوة إلا بالله» عند رؤية أو تذكّر نعمة.</p><p class="ln sual"><strong>سؤال:</strong> متى كانت آخر مرة أعجبتني نعمة عندي فنسيت أن أنسبها لله؟</p>
+</article><article class="card card-green" id="ayah-40">
+  <div class="card-head"><span class="card-num">40</span></div>
+  <p class="ayah">فَعَسَىٰ رَبِّىٓ أَن يُؤْتِيَنِ خَيْرًا مِّن جَنَّتِكَ وَيُرْسِلَ عَلَيْهَا حُسْبَانًا مِّنَ ٱلسَّمَآءِ فَتُصْبِحَ صَعِيدًا زَلَقًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> يرجو المؤمن أن يعطيه ربه خيرًا من جنته، وأن يرسل عليها عذابًا فتصبح أرضًا جرداء.</p><p class="ln tadabbur"><strong>تدبر:</strong> دعاء المؤمن لم يكن حقدًا، بل «غضبًا لله» كما يصفه السعدي، رجاءً في هداية صاحبه.</p><p class="ln amal"><strong>تطبيق:</strong> لا تتعلق قلبك بأسباب مادية (مال، مشاريع) كأنها باقية لا تزول.</p><p class="ln sual"><strong>سؤال:</strong> هل أنا معتمد في قلبي على أسباب الدنيا اعتمادًا يُنسيني مصدرها الحقيقي؟</p>
+</article><article class="card card-green" id="ayah-41">
+  <div class="card-head"><span class="card-num">41</span></div>
+  <p class="ayah">أَوْ يُصْبِحَ مَآؤُهَا غَوْرًا فَلَن تَسْتَطِيعَ لَهُۥ طَلَبًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> أو يغور ماء الجنة في الأرض فلا يستطيع الوصول إليه أبدًا.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> يربطها ابن كثير بآية الملك: «أرأيتم إن أصبح ماؤكم غورًا فمن يأتيكم بماء معين».</p><p class="ln tadabbur"><strong>تدبر:</strong> أصول النعم في حياتنا (كالماء هنا) قد تغور فجأة، فلا ينبغي الاطمئنان إليها اطمئنانًا مطلقًا.</p><p class="ln amal"><strong>تطبيق:</strong> اجعل غضبك لله دافعًا لإصلاح من أخطأ، لا للشماتة به.</p><p class="ln sual"><strong>سؤال:</strong> ما هي «أصول» النعم التي أعتمد عليها اعتمادًا مطلقًا؟</p>
+</article><article class="card card-green" id="ayah-42">
+  <div class="card-head"><span class="card-num">42</span></div>
+  <p class="ayah">وَأُحِيطَ بِثَمَرِهِۦ فَأَصْبَحَ يُقَلِّبُ كَفَّيْهِ عَلَىٰ مَآ أَنفَقَ فِيهَا وَهِىَ خَاوِيَةٌ عَلَىٰ عُرُوشِهَا وَيَقُولُ يَـٰلَيْتَنِى لَمْ أُشْرِكْ بِرَبِّىٓ أَحَدًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> تحقق ما توقعه المؤمن: هلكت الثمار كلها، وندم صاحبها لا على المال بل على شركه.</p><p class="ln tadabbur"><strong>تدبر:</strong> الوسيط يصف لحظة الصدمة: يقلّب كفيه أولًا من الفجيعة قبل أن ينطق — وأعمق خسارة يكتشفها الإنسان عند الفقد هي خسارة علاقته بربه.</p><p class="ln amal"><strong>تطبيق:</strong> حاسب نفسك دوريًا: هل قلبك معلّق بشيء قد يضيع فجأة أكثر مما ينبغي؟</p><p class="ln sual"><strong>سؤال:</strong> لو فقدت اليوم أهم ما أملك، ما أكبر ندمي: على المال، أم على تقصيري في حق الله؟</p>
+</article><article class="card card-green" id="ayah-43">
+  <div class="card-head"><span class="card-num">43</span></div>
+  <p class="ayah">وَلَمْ تَكُن لَّهُۥ فِئَةٌ يَنصُرُونَهُۥ مِن دُونِ ٱللَّهِ وَمَا كَانَ مُنتَصِرًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> لم تنفعه عشيرته التي افتخر بها، ولم يستطع نصرة نفسه.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> السعدي يفتح بابًا للرجاء: لا يُستبعد أن يكون قد تاب بعدها، لأن ظهور الندم علامة خير.</p><p class="ln tadabbur"><strong>تدبر:</strong> لا شيء من الأسباب البشرية (مال، جاه، أصدقاء) يغني عن قدر الله شيئًا.</p><p class="ln amal"><strong>تطبيق:</strong> لا تغترّ بكثرة الأنصار أو الأصدقاء كضمانة ضد المصائب.</p><p class="ln sual"><strong>سؤال:</strong> على أي «سند» بشري أعتمد في قلبي أكثر من اعتمادي على الله؟</p>
+</article><article class="card card-green" id="ayah-44">
+  <div class="card-head"><span class="card-num">44</span></div>
+  <p class="ayah">هُنَالِكَ ٱلْوَلَـٰيَةُ لِلَّهِ ٱلْحَقِّ ۚ هُوَ خَيْرٌ ثَوَابًا وَخَيْرٌ عُقْبًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> خلاصة القصة: الولاية الحقيقية لله وحده الحق، وثوابه خير من كل بديل.</p><p class="ln tadabbur"><strong>تدبر:</strong> كل غرور، ونصيحة، ودمار، وندم في القصة، غايته إيصال درس واحد: لا ولاية حقيقية إلا لله.</p><p class="ln amal"><strong>تطبيق:</strong> في كل موقف تشعر فيه بالعجز أو الحاجة لنصرة، الجأ إلى الله أولًا.</p><p class="ln sual"><strong>سؤال:</strong> ما الدرس الذي ألمسه أكثر بعد القصة كاملة: خطر الغرور، أم أهمية ولاية الله؟</p>
+</article></div>
+</section>
+<section class="group" id="g2">
+  <h2 class="group-title group-title-gold"><span class="tag">45–46</span>مثل الحياة الدنيا</h2>
+  <div class="cardgrid"><article class="card card-gold" id="ayah-45">
+  <div class="card-head"><span class="card-num">45</span></div>
+  <p class="ayah">وَٱضْرِبْ لَهُم مَّثَلَ ٱلْحَيَوٰةِ ٱلدُّنْيَا كَمَآءٍ أَنزَلْنَـٰهُ مِنَ ٱلسَّمَآءِ فَٱخْتَلَطَ بِهِۦ نَبَاتُ ٱلْأَرْضِ فَأَصْبَحَ هَشِيمًا تَذْرُوهُ ٱلرِّيَـٰحُ ۗ وَكَانَ ٱللَّهُ عَلَىٰ كُلِّ شَىْءٍ مُّقْتَدِرًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> مثل جديد: الدنيا كماء ينزل فينبت به الزرع ثم يجفّ ويتطاير هشيمًا.</p><p class="ln tadabbur"><strong>تدبر:</strong> يقترح السعدي تمرينًا: «قدّري أنك قد مِتّ، فأي الحالتين تختارين؟» — التمتع الزائل أم العمل الباقي.</p><p class="ln amal"><strong>تطبيق:</strong> وجّه طموحك وجهدك نحو ما يبقى (عمل صالح، علم نافع) لا لما يزول سريعًا.</p><p class="ln sual"><strong>سؤال:</strong> لو تخيلت نفسي بعد الموت، هل ستتغير أولوياتي في الأيام القادمة؟</p>
+</article><article class="card card-gold" id="ayah-46">
+  <div class="card-head"><span class="card-num">46</span></div>
+  <p class="ayah">ٱلْمَالُ وَٱلْبَنُونَ زِينَةُ ٱلْحَيَوٰةِ ٱلدُّنْيَا ۖ وَٱلْبَـٰقِيَـٰتُ ٱلصَّـٰلِحَـٰتُ خَيْرٌ عِندَ رَبِّكَ ثَوَابًا وَخَيْرٌ أَمَلًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> المال والبنون زينة الدنيا الزائلة، والباقيات الصالحات خير ثوابًا وأملًا.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> يوسّع السعدي «الباقيات الصالحات» لتشمل كل طاعة: صلاة وصدقة وذكر وعلم وبر وحسن خلق.</p><p class="ln tadabbur"><strong>تدبر:</strong> لم ينفِ الله قيمة المال والأولاد، بل وضعهما في مكانهما الصحيح: وسيلة لا غاية ولا مقياس فضل.</p><p class="ln amal"><strong>تطبيق:</strong> حاسب نفسك: هل تستخدم مالك ووقتك مع أولادك لتحصيل عمل باقٍ؟</p><p class="ln sual"><strong>سؤال:</strong> ما «الباقيات الصالحات» التي أعمل على تحصيلها فعلًا في حياتي اليومية؟</p>
+</article></div>
+</section>
+<section class="group" id="g3">
+  <h2 class="group-title group-title-blue"><span class="tag">47–49</span>مشهد يوم القيامة</h2>
+  <div class="cardgrid"><article class="card card-blue" id="ayah-47">
+  <div class="card-head"><span class="card-num">47</span></div>
+  <p class="ayah">وَيَوْمَ نُسَيِّرُ ٱلْجِبَالَ وَتَرَى ٱلْأَرْضَ بَارِزَةً وَحَشَرْنَـٰهُمْ فَلَمْ نُغَادِرْ مِنْهُمْ أَحَدًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> يوم تُسيَّر الجبال وتبرز الأرض ويُحشر الجميع دون أن يُترك منهم أحد.</p><p class="ln tadabbur"><strong>تدبر:</strong> حتى الجبال — رمز الثبات — زائلة بأمر الله، فما بالنا بما هو أضعف منها كالمال والجاه؟</p><p class="ln amal"><strong>تطبيق:</strong> استحضر هذا المشهد عند الغفلة أو الانشغال الزائد بمشاغل الدنيا.</p><p class="ln sual"><strong>سؤال:</strong> لو تخيلت نفسك في ذلك المشهد، كيف يتغير شعورك تجاه مشاغل حياتك اليوم؟</p>
+</article><article class="card card-blue" id="ayah-48">
+  <div class="card-head"><span class="card-num">48</span></div>
+  <p class="ayah">وَعُرِضُوا۟ عَلَىٰ رَبِّكَ صَفًّا لَّقَدْ جِئْتُمُونَا كَمَا خَلَقْنَـٰكُمْ أَوَّلَ مَرَّةٍۭ ۚ بَلْ زَعَمْتُمْ أَلَّن نَّجْعَلَ لَكُم مَّوْعِدًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> يُعرض الناس صفًّا: «جئتمونا كما خلقناكم أول مرة» — بلا مال ولا أهل.</p><p class="ln tadabbur"><strong>تدبر:</strong> الإنسان يقف يوم القيامة وحيدًا بلا سند من مال أو أهل، سوى عمله.</p><p class="ln amal"><strong>تطبيق:</strong> استعد بالعمل الصالح من الآن، فلا نسب ولا مال يشفع حينها.</p><p class="ln sual"><strong>سؤال:</strong> ماذا سأحمل معي يوم أُعرض على الله وحيدًا بلا مال ولا أهل؟</p>
+</article><article class="card card-blue" id="ayah-49">
+  <div class="card-head"><span class="card-num">49</span></div>
+  <p class="ayah">وَوُضِعَ ٱلْكِتَـٰبُ فَتَرَى ٱلْمُجْرِمِينَ مُشْفِقِينَ مِمَّا فِيهِ وَيَقُولُونَ يَـٰوَيْلَتَنَا مَالِ هَـٰذَا ٱلْكِتَـٰبِ لَا يُغَادِرُ صَغِيرَةً وَلَا كَبِيرَةً إِلَّآ أَحْصَىٰهَا ۚ وَوَجَدُوا۟ مَا عَمِلُوا۟ حَاضِرًا ۗ وَلَا يَظْلِمُ رَبُّكَ أَحَدًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> يوضع كتاب الأعمال فلا يغادر صغيرة ولا كبيرة، والله لا يظلم أحدًا.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> حديث النبي ﷺ يشبّه تراكم الذنوب الصغيرة بجمع الحطب عودًا عودًا حتى يهلك صاحبه.</p><p class="ln tadabbur"><strong>تدبر:</strong> دقة الكتاب تعني أن لا شيء يضيع من أعمالنا مهما بدا تافهًا.</p><p class="ln amal"><strong>تطبيق:</strong> لا تستهن بالذنوب الصغيرة المتكررة (غيبة يسيرة، كلمة جارحة، إهمال ذكر) فإنها تتراكم.</p><p class="ln sual"><strong>سؤال:</strong> ما «الصغائر» التي أستهين بها وقد تكون في ميزاني أكبر مما أظن؟</p>
+</article></div>
+</section>
+<section class="group" id="g4">
+  <h2 class="group-title group-title-red"><span class="tag">50–53</span>قصة إبليس ومشهد النار</h2>
+  <div class="cardgrid"><article class="card card-red" id="ayah-50">
+  <div class="card-head"><span class="card-num">50</span></div>
+  <p class="ayah">وَإِذْ قُلْنَا لِلْمَلَـٰٓئِكَةِ ٱسْجُدُوا۟ لِـَٔادَمَ فَسَجَدُوٓا۟ إِلَّآ إِبْلِيسَ كَانَ مِنَ ٱلْجِنِّ فَفَسَقَ عَنْ أَمْرِ رَبِّهِۦٓ ۗ أَفَتَتَّخِذُونَهُۥ وَذُرِّيَّتَهُۥٓ أَوْلِيَآءَ مِن دُونِى وَهُمْ لَكُمْ عَدُوٌّۢ ۚ بِئْسَ لِلظَّـٰلِمِينَ بَدَلًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> سجدت الملائكة لآدم إلا إبليس (كان من الجن) ففسق؛ تحذير من اتخاذه وذريته أولياء.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> خلاف مهم: هل كان إبليس من الملائكة أصلًا؟ رجّح كثيرون (كالحسن البصري) أنه أصل الجن كما آدم أصل الإنس، وشمله الأمر لحضوره بينهم.</p><p class="ln tadabbur"><strong>تدبر:</strong> العداوة بين إبليس وبني آدم أصلية وقديمة، بدأت من لحظة الأمر بالسجود، لا عرضية.</p><p class="ln amal"><strong>تطبيق:</strong> التزم الاستعاذة بالله عند الغضب والوسوسة، تذكرًا لهذه العداوة الأصلية.</p><p class="ln sual"><strong>سؤال:</strong> هل أتعامل مع الشيطان بجدية كعدو حقيقي كما تصفه الآية؟</p>
+</article><article class="card card-red" id="ayah-51">
+  <div class="card-head"><span class="card-num">51</span></div>
+  <p class="ayah">۞ مَّآ أَشْهَدتُّهُمْ خَلْقَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَلَا خَلْقَ أَنفُسِهِمْ وَمَا كُنتُ مُتَّخِذَ ٱلْمُضِلِّينَ عَضُدًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> لم يُشهد الله إبليس وذريته خلق شيء، وما اتخذ المضلين عونًا له.</p><p class="ln tadabbur"><strong>تدبر:</strong> من لا دور له في خلق أي شيء أصلًا، كيف يُرجى منه نفع أو يُخشى منه ضر؟</p><p class="ln amal"><strong>تطبيق:</strong> علّق قلبك بالله وحده في كل أمر؛ فالنصر الحقيقي منه وحده.</p><p class="ln sual"><strong>سؤال:</strong> من هي «الأعضاد» التي أعتمد عليها في حياتي أكثر من اعتمادي على الله؟</p>
+</article><article class="card card-red" id="ayah-52">
+  <div class="card-head"><span class="card-num">52</span></div>
+  <p class="ayah">وَيَوْمَ يَقُولُ نَادُوا۟ شُرَكَآءِىَ ٱلَّذِينَ زَعَمْتُمْ فَدَعَوْهُمْ فَلَمْ يَسْتَجِيبُوا۟ لَهُمْ وَجَعَلْنَا بَيْنَهُم مَّوْبِقًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> يوم يُنادى الشركاء المزعومون فلا يستجيبون، ويُجعل بينهم وبين عابديهم موبِق (هلاك).</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> اختلف المفسرون في تحديد «موبقًا»: مهلك عام، أو واد بعينه في جهنم — والمعنيان لا يتعارضان.</p><p class="ln tadabbur"><strong>تدبر:</strong> كل اعتماد على غير الله — صنمًا أو شخصًا أو مالًا — ينكشف عجزه التام في أحرج لحظة.</p><p class="ln amal"><strong>تطبيق:</strong> راجع من أو ما تعتمد عليه في حياتك دون أن تشعر (أشخاص، مكانة، مال).</p><p class="ln sual"><strong>سؤال:</strong> من أو ما هي «الشركاء» التي أعتمد عليها دون أن أشعر، وهل ستنفعني يوم القيامة؟</p>
+</article><article class="card card-red" id="ayah-53">
+  <div class="card-head"><span class="card-num">53</span></div>
+  <p class="ayah">وَرَءَا ٱلْمُجْرِمُونَ ٱلنَّارَ فَظَنُّوٓا۟ أَنَّهُم مُّوَاقِعُوهَا وَلَمْ يَجِدُوا۟ عَنْهَا مَصْرِفًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> يرى المجرمون النار فيوقنون هلاكهم ولا يجدون عنها مفرًا.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> حديث: «إن الكافر ليرى جهنم فيظن أنها مواقعته من مسيرة أربعين سنة».</p><p class="ln tadabbur"><strong>تدبر:</strong> من يرفض اليقين في الدنيا يُجبر عليه في الآخرة حين لا ينفعه إيمان ولا ندم.</p><p class="ln amal"><strong>تطبيق:</strong> اغتنم فرصة الحياة الدنيا للتوبة قبل أن يأتي وقت لا ينفع فيه الندم.</p><p class="ln sual"><strong>سؤال:</strong> لو استحضرنا هذا المشهد عند إقدامنا على معصية، كيف كان سيغيّر قرارنا؟</p>
+</article></div>
+</section>
+<section class="group" id="g5">
+  <h2 class="group-title group-title-violet"><span class="tag">54–59</span>طبيعة الإنسان وحكمة الإمهال</h2>
+  <div class="cardgrid"><article class="card card-violet" id="ayah-54">
+  <div class="card-head"><span class="card-num">54</span></div>
+  <p class="ayah">وَلَقَدْ صَرَّفْنَا فِى هَـٰذَا ٱلْقُرْءَانِ لِلنَّاسِ مِن كُلِّ مَثَلٍ ۚ وَكَانَ ٱلْإِنسَـٰنُ أَكْثَرَ شَىْءٍ جَدَلًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> نوّع الله الأمثال في القرآن ليصل الحق للقلوب، لكن الإنسان أكثر شيء جدلًا.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> حادثة سيدنا علي رضي الله عنه مع النبي ﷺ: حتى المؤمن الصالح قد ينزلق أحيانًا لعذر جدلي.</p><p class="ln tadabbur"><strong>تدبر:</strong> الجدل ليس مذمومًا دائمًا، لكنه يصبح آفة حين يكون وسيلة للهروب من الحق لا لطلبه.</p><p class="ln amal"><strong>تطبيق:</strong> راجع نفسك عند الاعتراض على نصيحة: هل هو اعتراض علمي، أم مجرد تهرب؟</p><p class="ln sual"><strong>سؤال:</strong> متى كانت آخر مرة «جادلت» لتبرر تقصيرًا بدل أن تعترف به وتصلحه؟</p>
+</article><article class="card card-violet" id="ayah-55">
+  <div class="card-head"><span class="card-num">55</span></div>
+  <p class="ayah">وَمَا مَنَعَ ٱلنَّاسَ أَن يُؤْمِنُوٓا۟ إِذْ جَآءَهُمُ ٱلْهُدَىٰ وَيَسْتَغْفِرُوا۟ رَبَّهُمْ إِلَّآ أَن تَأْتِيَهُمْ سُنَّةُ ٱلْأَوَّلِينَ أَوْ يَأْتِيَهُمُ ٱلْعَذَابُ قُبُلًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> لم يمنع الناس عن الإيمان إلا عنادهم، حتى ينتظروا نزول العذاب نفسه.</p><p class="ln tadabbur"><strong>تدبر:</strong> العناد قد يبلغ بصاحبه ألا يقتنع إلا بالعذاب ذاته، وعندها يفوت أوان الإيمان النافع.</p><p class="ln amal"><strong>تطبيق:</strong> لا تنتظر «علامة كبرى» أو أزمة لتستجيب لحق تعرفه بالفعل.</p><p class="ln sual"><strong>سؤال:</strong> هل ننتظر أحيانًا دليلاً أقوى لنستجيب لأمر نعرف أنه حق؟</p>
+</article><article class="card card-violet" id="ayah-56">
+  <div class="card-head"><span class="card-num">56</span></div>
+  <p class="ayah">وَمَا نُرْسِلُ ٱلْمُرْسَلِينَ إِلَّا مُبَشِّرِينَ وَمُنذِرِينَ ۚ وَيُجَـٰدِلُ ٱلَّذِينَ كَفَرُوا۟ بِٱلْبَـٰطِلِ لِيُدْحِضُوا۟ بِهِ ٱلْحَقَّ ۖ وَٱتَّخَذُوٓا۟ ءَايَـٰتِى وَمَآ أُنذِرُوا۟ هُزُوًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> مهمة الرسل التبشير والإنذار، ومع ذلك يجادل الكافرون بالباطل ويستهزئون.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> السعدي: وجود المجادلين بالباطل حكمة إلهية — سبب في وضوح الحق أكثر: «فبضدها تتبين الأشياء».</p><p class="ln tadabbur"><strong>تدبر:</strong> دورنا في الدعوة هو البلاغ الواضح، لا إجبار الناس ولا الانجرار وراء كل جدل يُراد به الإلهاء.</p><p class="ln amal"><strong>تطبيق:</strong> لا تنجرّ وراء كل جدل يُثار حول الدين بقصد الإلهاء أو التعجيز.</p><p class="ln sual"><strong>سؤال:</strong> كيف نميّز بين من يسأل بحثًا عن الحق ومن يجادل بقصد إبطاله؟</p>
+</article><article class="card card-violet" id="ayah-57">
+  <div class="card-head"><span class="card-num">57</span></div>
+  <p class="ayah">وَمَنْ أَظْلَمُ مِمَّن ذُكِّرَ بِـَٔايَـٰتِ رَبِّهِۦ فَأَعْرَضَ عَنْهَا وَنَسِىَ مَا قَدَّمَتْ يَدَاهُ ۚ إِنَّا جَعَلْنَا عَلَىٰ قُلُوبِهِمْ أَكِنَّةً أَن يَفْقَهُوهُ وَفِىٓ ءَاذَانِهِمْ وَقْرًا ۖ وَإِن تَدْعُهُمْ إِلَى ٱلْهُدَىٰ فَلَن يَهْتَدُوٓا۟ إِذًا أَبَدًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> لا أظلم ممن ذُكِّر بآيات ربه فأعرض ونسي ذنوبه؛ فيُختم على قلبه فلا يهتدي.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> السعدي: هذا أشد ظلمًا ممن لم تصله الآيات أصلًا — فالعاصي على علم أعظم جرمًا.</p><p class="ln tadabbur"><strong>تدبر:</strong> ختم القلب نتيجة طبيعية لإعراض متكرر ومتعمد، لا تصرف عشوائي من الله.</p><p class="ln amal"><strong>تطبيق:</strong> لا تستهن بأي موعظة تصلك مرارًا؛ تكرار الإعراض عنها يُقسّي القلب تدريجيًا.</p><p class="ln sual"><strong>سؤال:</strong> هل هناك موعظة سمعتها أكثر من مرة وأعرضت عنها دون تفكير؟</p>
+</article><article class="card card-violet" id="ayah-58">
+  <div class="card-head"><span class="card-num">58</span></div>
+  <p class="ayah">وَرَبُّكَ ٱلْغَفُورُ ذُو ٱلرَّحْمَةِ ۖ لَوْ يُؤَاخِذُهُم بِمَا كَسَبُوا۟ لَعَجَّلَ لَهُمُ ٱلْعَذَابَ ۚ بَل لَّهُم مَّوْعِدٌ لَّن يَجِدُوا۟ مِن دُونِهِۦ مَوْئِلًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> «ربك الغفور ذو الرحمة» — لا يعجّل بالعقاب، لكن لهم موعد لا مفر منه.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> ابن عاشور: التأجيل نفسه صورة من صور الرحمة، لا مجرد تأخير تقني للعقاب.</p><p class="ln tadabbur"><strong>تدبر:</strong> كل يوم يمر دون عذاب فرصة جديدة للتوبة، لكنها محدودة لا مفتوحة إلى الأبد.</p><p class="ln amal"><strong>تطبيق:</strong> لا تغترّ بتأخر العقوبة عن الذنب؛ فهذا إمهال له أجل محدد لا إفلات دائم.</p><p class="ln sual"><strong>سؤال:</strong> كيف أستثمر «مهلة» الحياة التي منحنيها الله بدل التقصير في وقت التوبة؟</p>
+</article><article class="card card-violet" id="ayah-59">
+  <div class="card-head"><span class="card-num">59</span></div>
+  <p class="ayah">وَتِلْكَ ٱلْقُرَىٰٓ أَهْلَكْنَـٰهُمْ لَمَّا ظَلَمُوا۟ وَجَعَلْنَا لِمَهْلِكِهِم مَّوْعِدًا</p>
+  <p class="ln meaning"><strong>المعنى:</strong> تلك القرى أُهلكت بظلمها لا بظلم من الله، ولهلاكها موعد محدد مسبقًا.</p><p class="ln tafsir"><strong>لمسة تفسير:</strong> ابن كثير: تحذير مباشر لمشركي قريش أن يصيبهم ما أصاب من قبلهم من الأمم.</p><p class="ln tadabbur"><strong>تدبر:</strong> ربط الهلاك بالظلم لا بمجرد المخالفة يعلّمنا أن العقوبات الإلهية عادلة لا تعسفية.</p><p class="ln amal"><strong>تطبيق:</strong> تأمل في قصص الأمم السابقة كعبرة حية، مع تذكّر أن سنة الله واحدة لا تتغير.</p><p class="ln sual"><strong>سؤال:</strong> ما الدرس من كون كل أمة ظالمة سبقتنا قد هلكت في «موعدها» رغم قوتها؟</p>
+</article></div>
+</section>
+
+  <section class="panel" id="discussion">
+    <h2>أسئلة للنقاش الجماعي</h2>
+    <ol class="numlist"><li><span class="chip alt">1</span><p>لو ملكت ما ملكه صاحب الجنتين، كيف أتوقع رد فعلي؟ وما الذي يحميني من نفس الغرور؟</p></li><li><span class="chip alt">2</span><p>ما «الباقيات الصالحات» التي أعمل على تحصيلها فعلًا، وما الذي أبدأ به اليوم؟</p></li><li><span class="chip alt">3</span><p>من أو ما «الأعضاد» التي أعتمد عليها أكثر من اعتمادي الحقيقي على الله؟</p></li><li><span class="chip alt">4</span><p>كيف يظهر أثر عداوة الشيطان في قراراتي اليومية؟</p></li><li><span class="chip alt">5</span><p>متى «جادلت» لتبرر تقصيرًا بدل الاعتراف به وإصلاحه؟</p></li><li><span class="chip alt">6</span><p>هل هناك تذكير سمعته مرارًا وأعرضت عنه؟ ما الذي يمنعني من التوقف عنده الآن؟</p></li><li><span class="chip alt">7</span><p>كيف أستثمر «مهلة» الحياة، بدل التعامل مع تأخر العقوبة كدليل على عدم أهميتها؟</p></li><li><span class="chip alt">8</span><p>بعد قراءة المقطع كاملًا، ما التغيير العملي الواحد الذي سأطبّقه هذا الأسبوع؟</p></li></ol>
+  </section>
+
+  <footer>مصادر التفسير: الطبري، ابن كثير، القرطبي، السعدي، ابن عاشور (التحرير والتنوير)، الوسيط لطنطاوي.</footer>
+</div>
+
+</body>
+</html>
