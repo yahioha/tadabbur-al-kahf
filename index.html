@@ -9,41 +9,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Amiri+Quran&family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #fbf7ec;
-  --surface: #ffffff;
-  --surface-2: #f2ead6;
-  --ink: #2b2620;
-  --ink-soft: #6b6152;
-  --border: #e4d8ba;
-  --accent: #2f5d4e;
-  --shadow: 0 1px 2px rgba(43,38,32,.05), 0 8px 22px rgba(43,38,32,.05);
+  --bg: #faf6ee;
+  --surface: #fffdf8;
+  --surface-2: #f2ebdd;
+  --ink: #24264a;
+  --ink-soft: #4d4c6c;
+  --border: #e6d9bb;
+  --accent: #8a6a2c;
+  --pill: #2c3160; --pill-ink: #fffaf0;
+  --shadow: 0 1px 2px rgba(20,24,51,.06), 0 12px 32px -14px rgba(20,24,51,.28);
 
   --green: #2f5d4e;    --green-soft: #e7efe9;
-  --gold:  #9c6b1f;    --gold-soft:  #f4ecd6;
+  --gold:  #8a6a2c;    --gold-soft:  #f1e2b8;
   --blue:  #33586f;    --blue-soft:  #e6edf1;
   --red:   #8a3a2e;    --red-soft:   #f3e5e1;
   --violet:#5b4a78;    --violet-soft:#ece7f2;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #141e1a; --surface: #1c2822; --surface-2: #223129;
-    --ink: #ece4d3; --ink-soft: #a99f8b; --border: #33453c;
-    --accent: #7fb89a;
-    --shadow: 0 1px 2px rgba(0,0,0,.35), 0 8px 22px rgba(0,0,0,.28);
+    --bg: #0f1229; --surface: #151936; --surface-2: #1a1e3e;
+    --ink: #f1e8d4; --ink-soft: #d6cdb9; --border: #2c3160;
+    --accent: #e0bf78;
+    --pill: #d7b46a; --pill-ink: #141833;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 14px 34px -14px rgba(0,0,0,.6);
     --green: #7fb89a;  --green-soft: #203029;
-    --gold:  #d9ac62;  --gold-soft:  #2e2717;
+    --gold:  #e0bf78;  --gold-soft:  #3a3350;
     --blue:  #8fb2c7;  --blue-soft:  #1e2a30;
     --red:   #d98f7f;  --red-soft:   #2e211d;
     --violet:#b3a3d6;  --violet-soft:#241f31;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #141e1a; --surface: #1c2822; --surface-2: #223129;
-  --ink: #ece4d3; --ink-soft: #a99f8b; --border: #33453c;
-  --accent: #7fb89a;
-  --shadow: 0 1px 2px rgba(0,0,0,.35), 0 8px 22px rgba(0,0,0,.28);
+  --bg: #0f1229; --surface: #151936; --surface-2: #1a1e3e;
+  --ink: #f1e8d4; --ink-soft: #d6cdb9; --border: #2c3160;
+  --accent: #e0bf78;
+  --pill: #d7b46a; --pill-ink: #141833;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 14px 34px -14px rgba(0,0,0,.6);
   --green: #7fb89a;  --green-soft: #203029;
-  --gold:  #d9ac62;  --gold-soft:  #2e2717;
+  --gold:  #e0bf78;  --gold-soft:  #3a3350;
   --blue:  #8fb2c7;  --blue-soft:  #1e2a30;
   --red:   #d98f7f;  --red-soft:   #2e211d;
   --violet:#b3a3d6;  --violet-soft:#241f31;
@@ -59,10 +62,17 @@ body {
 h1,h2,h3 { font-family:'Amiri', serif; text-wrap: balance; margin: 0 0 .3em; }
 a { color: inherit; }
 
-.hero { padding: 30px 0 16px; text-align: center; }
-.hero .kicker { font-size: .85rem; letter-spacing: .06em; color: var(--ink-soft); }
-.hero .surah { font-family:'Aref Ruqaa','Amiri Quran','Amiri',serif; font-weight: 700; font-size: 2.7rem; color: var(--accent); margin: .15em 0; }
+.hero { padding: 34px 0 20px; text-align: center; }
+.hero .kicker { font-size: .85rem; letter-spacing: .1em; color: var(--accent); font-weight: 600; }
+.hero .surah {
+  font-family:'Aref Ruqaa','Amiri Quran','Amiri',serif; font-weight: 700; font-size: 2.7rem;
+  color: var(--accent); margin: .2em 0; text-shadow: 0 0 28px rgba(138,106,44,.18);
+}
 .hero .subtitle { font-size: 1.02rem; color: var(--ink-soft); max-width: 560px; margin: 0 auto; }
+.hero .rule {
+  width: 96px; height: 3px; margin: 14px auto 0; border-radius: 999px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
 
 /* index pad */
 .indexbar {
@@ -72,17 +82,18 @@ a { color: inherit; }
 .indexbar .indexlabel { font-size: .82rem; color: var(--ink-soft); margin-bottom: 6px; }
 .idxrow { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
 .idx {
-  width: 31px; height: 31px; display: flex; align-items: center; justify-content: center;
-  border-radius: 7px; font-size: .85rem; font-weight: 700; text-decoration: none;
+  width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; font-size: .85rem; font-weight: 700; text-decoration: none;
   font-variant-numeric: tabular-nums; border: 1px solid var(--border);
-  background: var(--surface); color: var(--ink-soft);
+  background: var(--surface); color: var(--ink-soft); transition: transform .15s var(--ease), box-shadow .15s;
 }
+.idx:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
 .idx-green { color: var(--green); } .idx-gold { color: var(--gold); }
 .idx-blue { color: var(--blue); } .idx-red { color: var(--red); } .idx-violet { color: var(--violet); }
 
-.navrow { display: flex; flex-wrap: wrap; gap: 6px; }
+.navrow { display: flex; flex-wrap: wrap; gap: 7px; }
 .navchip {
-  display: flex; flex-direction: column; gap: 0; padding: 5px 11px; border-radius: 8px;
+  display: flex; flex-direction: column; gap: 0; padding: 6px 14px; border-radius: 999px;
   font-size: .82rem; font-weight: 700; text-decoration: none; border: 1px solid transparent;
 }
 .navchip span { font-weight: 400; font-size: .76rem; opacity: .85; }
@@ -93,19 +104,22 @@ a { color: inherit; }
 .navchip-violet { background: var(--violet-soft); color: var(--violet); }
 
 .panel {
-  background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
-  padding: 16px 20px; margin-bottom: 18px; box-shadow: var(--shadow);
+  background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+  padding: 18px 22px; margin-bottom: 20px; box-shadow: var(--shadow);
 }
 .panel h2 { font-size: 1.3rem; color: var(--accent); margin-bottom: 10px; }
 
 /* cheat sheet */
-.cheatgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 10px; }
-.cheat { border-radius: 10px; padding: 10px 12px; border: 1px solid var(--border); }
+.cheatgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 12px; }
+.cheat { border-radius: 14px; padding: 12px 14px; border: 1px solid var(--border); }
 .cheat-green { background: var(--green-soft); } .cheat-gold { background: var(--gold-soft); }
 .cheat-blue { background: var(--blue-soft); } .cheat-red { background: var(--red-soft); }
 .cheat-violet { background: var(--violet-soft); }
-.cheat-top { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
-.cheat-rng { font-family:'Amiri',serif; font-weight: 700; font-size: .88rem; font-variant-numeric: tabular-nums; }
+.cheat-top { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; }
+.cheat-rng {
+  font-family:'Amiri',serif; font-weight: 700; font-size: .8rem; font-variant-numeric: tabular-nums;
+  background: rgba(0,0,0,.06); padding: 1px 9px; border-radius: 999px;
+}
 .cheat-title { font-weight: 700; font-size: 1rem; }
 .cheat p { margin: 0; font-size: .92rem; line-height: 1.65; color: var(--ink-soft); }
 
@@ -113,18 +127,18 @@ a { color: inherit; }
 .numlist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .numlist li { display: flex; gap: 10px; align-items: flex-start; }
 .chip {
-  flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--accent);
+  flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--accent);
   color: var(--surface); display: flex; align-items: center; justify-content: center;
   font-family:'Amiri',serif; font-weight: 700; font-size: .8rem; font-variant-numeric: tabular-nums;
 }
-.chip.alt { background: var(--gold); }
+.chip.alt { background: var(--pill); color: var(--pill-ink); }
 .numlist p { margin: 0; font-size: 1rem; padding-top: 2px; }
 
 /* verse groups */
 .group { margin-bottom: 22px; }
 .group-title { display: flex; align-items: baseline; gap: 8px; font-size: 1.3rem; margin: 0 0 10px 2px; }
 .group-title .tag {
-  font-family:'Amiri',serif; font-weight: 700; font-size: .82rem; padding: 3px 10px; border-radius: 7px;
+  font-family:'Amiri',serif; font-weight: 700; font-size: .82rem; padding: 4px 12px; border-radius: 999px;
   color: var(--surface); font-variant-numeric: tabular-nums;
 }
 .group-title-green .tag { background: var(--green); } .group-title-green { color: var(--green); }
@@ -138,8 +152,8 @@ a { color: inherit; }
 
 .card {
   break-inside: avoid; background: var(--surface); border: 1px solid var(--border);
-  border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; box-shadow: var(--shadow);
-  border-inline-start: 3px solid var(--border);
+  border-radius: 16px; padding: 14px 16px; margin: 0 0 12px; box-shadow: var(--shadow);
+  border-inline-start: 4px solid var(--border);
 }
 .card-green { border-inline-start-color: var(--green); }
 .card-gold { border-inline-start-color: var(--gold); }
@@ -154,7 +168,7 @@ a { color: inherit; }
 .card-num::before { content: "﴿"; } .card-num::after { content: "﴾"; }
 .ayah {
   font-family: 'Amiri Quran','Amiri',serif; font-size: 1.32rem; line-height: 2.15; letter-spacing: .01em;
-  margin: 0 0 8px; padding: 11px 13px; border-radius: 9px;
+  margin: 0 0 10px; padding: 13px 15px; border-radius: 12px;
   background: var(--surface-2); color: var(--ink);
 }
 .card-green .ayah { background: var(--green-soft); }
@@ -194,6 +208,7 @@ footer { text-align: center; font-size: .88rem; color: var(--ink-soft); padding-
     <div class="kicker">دليل جلسة تدبّر — نسخة مختصرة</div>
     <div class="surah">سورة الكهف · الآيات 32–59</div>
     <div class="subtitle">أهم المعاني ولمسات التدبر من الطبري وابن كثير والقرطبي والسعدي وابن عاشور والوسيط، بصيغة سريعة الالتقاط والتنقل</div>
+    <div class="rule"></div>
   </div>
 
   <div class="indexbar">
