@@ -53,27 +53,27 @@
 body {
   background: var(--bg); color: var(--ink); margin: 0;
   font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
-  direction: rtl; line-height: 1.7; font-size: 15px;
+  direction: rtl; line-height: 1.75; font-size: 17px;
 }
 .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px 56px; }
 h1,h2,h3 { font-family:'Amiri', serif; text-wrap: balance; margin: 0 0 .3em; }
 a { color: inherit; }
 
 .hero { padding: 30px 0 16px; text-align: center; }
-.hero .kicker { font-size: .78rem; letter-spacing: .06em; color: var(--ink-soft); }
-.hero .surah { font-family:'Aref Ruqaa','Amiri Quran','Amiri',serif; font-weight: 700; font-size: 2.5rem; color: var(--accent); margin: .15em 0; }
-.hero .subtitle { font-size: .88rem; color: var(--ink-soft); max-width: 560px; margin: 0 auto; }
+.hero .kicker { font-size: .85rem; letter-spacing: .06em; color: var(--ink-soft); }
+.hero .surah { font-family:'Aref Ruqaa','Amiri Quran','Amiri',serif; font-weight: 700; font-size: 2.7rem; color: var(--accent); margin: .15em 0; }
+.hero .subtitle { font-size: 1.02rem; color: var(--ink-soft); max-width: 560px; margin: 0 auto; }
 
 /* index pad */
 .indexbar {
   position: sticky; top: 0; z-index: 6; background: var(--bg);
   padding: 10px 0; border-bottom: 1px solid var(--border); margin-bottom: 18px;
 }
-.indexbar .indexlabel { font-size: .72rem; color: var(--ink-soft); margin-bottom: 6px; }
+.indexbar .indexlabel { font-size: .82rem; color: var(--ink-soft); margin-bottom: 6px; }
 .idxrow { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
 .idx {
-  width: 27px; height: 27px; display: flex; align-items: center; justify-content: center;
-  border-radius: 7px; font-size: .74rem; font-weight: 700; text-decoration: none;
+  width: 31px; height: 31px; display: flex; align-items: center; justify-content: center;
+  border-radius: 7px; font-size: .85rem; font-weight: 700; text-decoration: none;
   font-variant-numeric: tabular-nums; border: 1px solid var(--border);
   background: var(--surface); color: var(--ink-soft);
 }
@@ -82,10 +82,10 @@ a { color: inherit; }
 
 .navrow { display: flex; flex-wrap: wrap; gap: 6px; }
 .navchip {
-  display: flex; flex-direction: column; gap: 0; padding: 4px 10px; border-radius: 8px;
-  font-size: .72rem; font-weight: 700; text-decoration: none; border: 1px solid transparent;
+  display: flex; flex-direction: column; gap: 0; padding: 5px 11px; border-radius: 8px;
+  font-size: .82rem; font-weight: 700; text-decoration: none; border: 1px solid transparent;
 }
-.navchip span { font-weight: 400; font-size: .68rem; opacity: .85; }
+.navchip span { font-weight: 400; font-size: .76rem; opacity: .85; }
 .navchip-green { background: var(--green-soft); color: var(--green); }
 .navchip-gold { background: var(--gold-soft); color: var(--gold); }
 .navchip-blue { background: var(--blue-soft); color: var(--blue); }
@@ -96,8 +96,8 @@ a { color: inherit; }
   background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
   padding: 16px 20px; margin-bottom: 18px; box-shadow: var(--shadow);
 }
-.panel h2 { font-size: 1.08rem; color: var(--accent); margin-bottom: 10px; }
-.videonote { font-size: .82rem; color: var(--ink-soft); }
+.panel h2 { font-size: 1.3rem; color: var(--accent); margin-bottom: 10px; }
+.videonote { font-size: .95rem; color: var(--ink-soft); }
 .videonote ul { margin: 6px 0; padding-inline-start: 1.1em; }
 
 /* cheat sheet */
@@ -107,9 +107,9 @@ a { color: inherit; }
 .cheat-blue { background: var(--blue-soft); } .cheat-red { background: var(--red-soft); }
 .cheat-violet { background: var(--violet-soft); }
 .cheat-top { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
-.cheat-rng { font-family:'Amiri',serif; font-weight: 700; font-size: .78rem; font-variant-numeric: tabular-nums; }
-.cheat-title { font-weight: 700; font-size: .85rem; }
-.cheat p { margin: 0; font-size: .78rem; color: var(--ink-soft); }
+.cheat-rng { font-family:'Amiri',serif; font-weight: 700; font-size: .88rem; font-variant-numeric: tabular-nums; }
+.cheat-title { font-weight: 700; font-size: 1rem; }
+.cheat p { margin: 0; font-size: .92rem; line-height: 1.65; color: var(--ink-soft); }
 
 /* lists */
 .numlist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
@@ -120,13 +120,13 @@ a { color: inherit; }
   font-family:'Amiri',serif; font-weight: 700; font-size: .8rem; font-variant-numeric: tabular-nums;
 }
 .chip.alt { background: var(--gold); }
-.numlist p { margin: 0; font-size: .87rem; padding-top: 2px; }
+.numlist p { margin: 0; font-size: 1rem; padding-top: 2px; }
 
 /* verse groups */
 .group { margin-bottom: 22px; }
-.group-title { display: flex; align-items: baseline; gap: 8px; font-size: 1.05rem; margin: 0 0 10px 2px; }
+.group-title { display: flex; align-items: baseline; gap: 8px; font-size: 1.3rem; margin: 0 0 10px 2px; }
 .group-title .tag {
-  font-family:'Amiri',serif; font-weight: 700; font-size: .72rem; padding: 2px 9px; border-radius: 7px;
+  font-family:'Amiri',serif; font-weight: 700; font-size: .82rem; padding: 3px 10px; border-radius: 7px;
   color: var(--surface); font-variant-numeric: tabular-nums;
 }
 .group-title-green .tag { background: var(--green); } .group-title-green { color: var(--green); }
@@ -164,13 +164,13 @@ a { color: inherit; }
 .card-blue  .ayah { background: var(--blue-soft); }
 .card-red   .ayah { background: var(--red-soft); }
 .card-violet .ayah { background: var(--violet-soft); }
-.ln { margin: 0 0 5px; font-size: .82rem; color: var(--ink); }
+.ln { margin: 0 0 7px; font-size: .98rem; line-height: 1.75; color: var(--ink); }
 .ln:last-child { margin-bottom: 0; }
-.ln strong { color: var(--ink-soft); font-weight: 700; font-size: .74rem; }
+.ln strong { color: var(--ink-soft); font-weight: 700; font-size: .88rem; }
 .ln.tafsir { color: var(--ink-soft); }
 .ln.sual { color: var(--ink-soft); font-style: italic; }
 
-footer { text-align: center; font-size: .76rem; color: var(--ink-soft); padding-top: 8px; }
+footer { text-align: center; font-size: .88rem; color: var(--ink-soft); padding-top: 8px; }
 
 @media (max-width: 480px) {
   .hero .surah { font-size: 1.7rem; }
